@@ -1,0 +1,60 @@
+:root {
+  /* Colors from Tailwind Config */
+  --primary: #ddb7ff;
+  --primary-container: #b76dff;
+  --on-primary-container: #400071;
+  --background: #16111b;
+  --surface: #16111b;
+  --on-surface: #eadfed;
+  --on-surface-variant: #cfc2d6;
+  --surface-container: #231e27;
+  --surface-container-lowest: #110c15;
+  
+  /* Spacing & Sizes */
+  --container-max: 1280px;
+  --gutter: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Reusable Glass Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ddb7ff 0%, #842bd2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.uppercase-tracking {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.badge {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

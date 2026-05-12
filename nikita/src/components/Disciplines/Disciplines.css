@@ -1,0 +1,113 @@
+.disciplines {
+  padding: 120px var(--gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.disciplines-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.disciplines-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  height: 4px;
+  width: 96px;
+  background-color: var(--primary);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* Bento Grid System */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  height: 300px;
+}
+
+.card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.bento-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--surface), rgba(22, 17, 27, 0.2), transparent);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.card-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: var(--on-surface-variant);
+  font-size: 16px;
+  /* Simula el line-clamp-2 de TW */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsivo - Desktop Bento Layout */
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 350px);
+    height: 700px;
+  }
+
+  .card-salsa {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .card-bachata {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .card-ballet {
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 100%;
+  }
+
+  .card-urban {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+}

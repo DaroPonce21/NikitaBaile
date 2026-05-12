@@ -1,0 +1,124 @@
+.schedule {
+  padding: 120px 0;
+  background-color: var(--surface-container-lowest);
+}
+
+.schedule-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.schedule-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+.schedule-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: var(--on-surface);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-subtitle {
+  color: var(--on-surface-variant);
+}
+
+.schedule-legend {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Legend Badges */
+.bg-beginner { background: rgba(221, 183, 255, 0.2); color: var(--primary); }
+.bg-intermediate { background: #4a4949; color: #bab8b7; }
+.bg-advanced { background: #39323d; color: #cfc2d6; }
+
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 800px; /* Asegura que no se rompa en móviles muy chicos */
+}
+
+.schedule-table th {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--on-surface-variant);
+}
+
+.schedule-table td {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+}
+
+.schedule-table tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.time-cell {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.empty-cell {
+  opacity: 0.3;
+  text-align: center;
+}
+
+/* Class Boxes */
+.class-box {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+}
+
+.class-box.beginner {
+  background: rgba(221, 183, 255, 0.1);
+  border-color: rgba(221, 183, 255, 0.2);
+}
+
+.class-box.intermediate {
+  background: rgba(74, 73, 73, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.class-box.advanced {
+  background: #39323d;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.class-name {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.class-level {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .schedule-header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
